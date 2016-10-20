@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+datarootdir=@datarootdir@
+datadir=@datadir@
+includedir=@includedir@/%autotools_project_template%
+
+Name: %autotools_project_template% 
+Description: Autotools template with CppUTest integration.
+Version: @VERSION@
+Requires: 
+Libs: -L${libdir} -l%autotools_project_template%
+Cflags: -I${includedir}
