@@ -13,6 +13,7 @@ AC_PROG_CXX
 LT_INIT
 
 #PKG_CHECK_MODULES(DEPENDENCIES, [])
+#AC_CONFIG_LINKS([file:file])
 
 AC_ARG_ENABLE(tests,
               AS_HELP_STRING([--enable-tests],[Enable usage of unit tests [default=no]]),

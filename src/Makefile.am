@@ -31,11 +31,11 @@ EXTRA_DIST = \
 	%autotools_project_template%.pc.in
 
 if ENABLE_TESTS
+if ENABLE_COVERAGE
 AM_CFLAGS +=\
 	-fprofile-arcs\
 	-ftest-coverage
 
-if ENABLE_COVERAGE
 lib%autotools_project_template%_la_LIBADD += -lgcov
 endif
 endif

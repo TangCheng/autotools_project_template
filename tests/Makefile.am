@@ -1,6 +1,6 @@
 noinst_PROGRAMS = $(TEST_PROGS)
 
-PRODUCTION_CODE_INCLUDES = -I$(top_builddir)/src
+PRODUCTION_CODE_INCLUDES = -I$(top_srcdir)/src
 PRODUCTION_CODE_LIBS = $(top_builddir)/src/lib%autotools_project_template%.la
 
 AM_CPPFLAGS = \
