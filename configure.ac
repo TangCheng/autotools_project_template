@@ -34,7 +34,10 @@ AS_IF([test "x$enable_coverage" = "xyes"],
       [AM_CONDITIONAL([ENABLE_COVERAGE], false)])
 
 AC_CONFIG_FILES([Makefile
-#                src/%autotools_project_template%.pc
                 src/Makefile])
+
+#AC_CONFIG_FILES([Makefile
+#                src/%autotools_project_template%.pc
+#                src/Makefile])
 
 AC_OUTPUT
