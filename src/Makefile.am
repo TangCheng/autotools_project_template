@@ -10,6 +10,7 @@ AM_CFLAGS =\
 	-Wall\
 	-g
 
+if ENABLE_TESTS
 lib%autotools_project_template%_la_includedir = $(includedir)/%autotools_project_template%
 
 lib_LTLIBRARIES = lib%autotools_project_template%.la
@@ -24,11 +25,21 @@ lib%autotools_project_template%_la_LIBADD= $(DEPENDENCIES_LIBS)
 lib%autotools_project_template%_la_include_HEADERS = \
 	%autotools_project_template%.h
 
-pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = %autotools_project_template%.pc
+#pkgconfigdir = $(libdir)/pkgconfig
+#pkgconfig_DATA = %autotools_project_template%.pc
 
-EXTRA_DIST = \
-	%autotools_project_template%.pc.in
+#EXTRA_DIST = \
+#	%autotools_project_template%.pc.in
+endif
+
+bin_PROGRAMS = %autotools_project_template%
+
+%autotools_project_template%_SOURCES = \
+	%autotools_project_template%.c
+
+%autotools_project_template%_LDFLAGS = $(AM_CFLAGS)
+
+%autotools_project_template%_LDADD = $(DEPENDENCIES_LIBS)
 
 if ENABLE_TESTS
 if ENABLE_COVERAGE
