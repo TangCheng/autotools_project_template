@@ -3,7 +3,7 @@ AC_INIT([%autotools_project_template%],
         [tangcheng2005@gmail.com])
 
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_AUX_DIR([build-aux])
 
 AM_INIT_AUTOMAKE([1.11])
 
@@ -12,6 +12,8 @@ AC_PROG_CXX
 
 LT_INIT
 
+#BOOST_REQUIRE
+#BOOST_*
 #PKG_CHECK_MODULES(DEPENDENCIES, [])
 #AC_CONFIG_LINKS([file:file])
 

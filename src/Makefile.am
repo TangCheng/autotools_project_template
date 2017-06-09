@@ -20,9 +20,13 @@ lib_LTLIBRARIES = lib%autotools_project_template%.la
 lib%autotools_project_template%_la_SOURCES = \
 	%autotools_project_template%.c
 
+#lib%autotools_project_template%_la_CPPFLAGS = $(BOOST_CPPFLAGS)
+
 lib%autotools_project_template%_la_LDFLAGS = 
- 
-lib%autotools_project_template%_la_LIBADD= $(DEPENDENCIES_LIBS)
+#lib%autotools_project_template%_la_LDFLAGS += $(BOOST_*_LDFLAGS)
+
+lib%autotools_project_template%_la_LIBADD = $(DEPENDENCIES_LIBS)
+#lib%autotools_project_template%_la_LIBADD += $(BOOST_*_LIBS)
 
 lib%autotools_project_template%_la_include_HEADERS = \
 	%autotools_project_template%.h
@@ -40,12 +44,14 @@ bin_PROGRAMS = %autotools_project_template%
 	%autotools_project_template%.c
 
 %autotools_project_template%_CFLAGS = $(AM_CFLAGS)
-
+#%autotools_project_template%_CPPFLAGS = $(BOOST_CPPFLAGS)
 %autotools_project_template%_CXXFLAGS = $(AM_CXXFLAGS)
 
 %autotools_project_template%_LDFLAGS = $(AM_LDFLAGS)
+#%autotools_project_template%_LDFLAGS += $(BOOST_*_LDFLAGS)
 
 %autotools_project_template%_LDADD = $(DEPENDENCIES_LIBS)
+#%autotools_project_template%_LDADD += $(BOOST_*_LIBS)
 
 if ENABLE_TESTS
 if ENABLE_COVERAGE
