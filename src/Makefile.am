@@ -10,6 +10,8 @@ AM_CFLAGS =\
 	-Wall\
 	-g
 
+AM_CXXFLAGS = $(AM_CFLAGS)
+
 if ENABLE_TESTS
 lib%autotools_project_template%_la_includedir = $(includedir)/%autotools_project_template%
 
@@ -37,7 +39,11 @@ bin_PROGRAMS = %autotools_project_template%
 %autotools_project_template%_SOURCES = \
 	%autotools_project_template%.c
 
-%autotools_project_template%_LDFLAGS = $(AM_CFLAGS)
+%autotools_project_template%_CFLAGS = $(AM_CFLAGS)
+
+%autotools_project_template%_CXXFLAGS = $(AM_CXXFLAGS)
+
+%autotools_project_template%_LDFLAGS = $(AM_LDFLAGS)
 
 %autotools_project_template%_LDADD = $(DEPENDENCIES_LIBS)
 
