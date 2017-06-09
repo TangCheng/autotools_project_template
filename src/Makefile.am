@@ -11,6 +11,7 @@ AM_CFLAGS =\
 	-g
 
 AM_CXXFLAGS = $(AM_CFLAGS)
+#AM_CXXFLAGS += -std=c++11
 
 if ENABLE_TESTS
 lib%autotools_project_template%_la_includedir = $(includedir)/%autotools_project_template%

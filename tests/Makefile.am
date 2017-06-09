@@ -12,6 +12,7 @@ AM_CFLAGS =	-Werror\
 	-g
 
 AM_CXXFLAGS = $(AM_CFLAGS)
+#AM_CXXFLAGS += -std=c++11
 
 TEST_PROGS = %autotools_project_template%_tests
 
